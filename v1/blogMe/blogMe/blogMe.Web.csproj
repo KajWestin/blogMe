@@ -246,6 +246,20 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\blogMe.Core\blogMe.Core.csproj">
+      <Project>{87ea0330-d956-4d78-86af-b0852ad947b0}</Project>
+      <Name>blogMe.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\blogMe.Domain\blogMe.Domain.csproj">
+      <Project>{bafc1930-9cc8-4b90-bcaa-c2576d36cc4b}</Project>
+      <Name>blogMe.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\blogMe.Services\blogMe.Services.csproj">
+      <Project>{232da89d-61ce-42c1-9f87-277ede76ad9f}</Project>
+      <Name>blogMe.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

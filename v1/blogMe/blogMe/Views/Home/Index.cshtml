@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<blogMe.Core.Model.Blog>
+@{
     ViewBag.Title = "blogMe";
 }
 
@@ -12,8 +13,26 @@
 
         <h2>Utforska spännande bloggar på blogMe</h2>
         <div class="row">
-            <div class="col-md-12">
-             
+            <div class="col-md-8">
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Bloggar på blogMe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var blog in Model)
+                        {
+                            <tr>
+                                <td>@blog.Name</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
             </div>
         </div>
 
