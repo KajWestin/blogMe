@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using blogMe.Core.DbContexts;
+using blogMe.Core.Model;
 
 namespace blogMe.Controllers
 {
@@ -10,7 +12,9 @@ namespace blogMe.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var db = new BloggingContext();
+
+            return View(db.Blogs);
         }
 
         public ActionResult About()
